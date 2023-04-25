@@ -11,11 +11,20 @@ export class Game extends Engine {
 
     startGame() {
         console.log("start de game!")
-        const fish = new Actor()
+        const fish = new Actor({
+            width: Resources.Fish.width,
+            height: Resources.Fish.height
+        })
         fish.graphics.use(Resources.Fish.toSprite())
         fish.pos = new Vector(400, 300)
         fish.vel = new Vector(-10,0)
         this.add(fish)
+
+        fish.on('pointerdown', () => {
+            console.log("dead fish");
+            fish.kill();
+        })
+
     }
 }
 
