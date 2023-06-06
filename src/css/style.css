@@ -1,5 +1,54 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/caliper.ttf') format('truetype');
+}
+
 body {
-    margin:0;
-    padding:0;
-    background-color:darkgray;
+    font-family: 'CustomFont', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: darkblue;
+}
+
+canvas {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.customContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+}
+
+.excalibur-loader {
+    background-color: #000 !important;
+}
+
+.customButton {
+    width: 300px;
+    height: 60px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    margin-top: 50px;
+    margin-left: 40px;
+    font-family: 'CustomFont', Arial, sans-serif;
+    transition: box-shadow 0.3s;
+    font-size: 20px;
+}
+
+.customButton:hover {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.customLogo {
+    margin-top: -180px;
+    height: 270px;
 }
