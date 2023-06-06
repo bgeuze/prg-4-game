@@ -25,7 +25,7 @@ ResourceLoader.startButtonFactory = () => {
 
     let btn = document.createElement('button');
     btn.classList.add('customButton');
-    btn.innerText = "start game";
+    btn.innerText = "new game";
     container.appendChild(btn);
 
     return container;

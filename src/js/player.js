@@ -19,7 +19,7 @@ export class Player extends Actor {
         });
 
         const idle = runSheet.sprites[0];
-        const playerRun = Animation.fromSpriteSheet(runSheet, range(1, 9), 80);
+        const playerRun = Animation.fromSpriteSheet(runSheet, range(1, 10), 80);
         const playerHurt = Animation.fromSpriteSheet(hurtSheet, range(1, 10), 80);
 
         this.graphics.add("idle", idle);

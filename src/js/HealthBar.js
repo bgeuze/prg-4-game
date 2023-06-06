@@ -1,11 +1,10 @@
 import { ScreenElement, Vector, Color, Rectangle } from 'excalibur';
-import { EndScene } from './endscene.js';
+import {EndScene} from "./endscene.js";
 
 export class HealthBar extends ScreenElement {
     healthrectangle;
     borderrectangle;
     gameInstance;
-
     constructor(game) {
         super();
         this.gameInstance = game;
@@ -37,9 +36,10 @@ export class HealthBar extends ScreenElement {
         console.log(this.healthrectangle.width);
         if (this.healthrectangle.width <= 380) {
             console.log('game over');
-            const endgame = new EndScene();
+            const endgame = new EndScene(this.gameInstance.savedData.getScore(), this.gameInstance.savedData.getUserId());
             this.gameInstance.add('gameover', endgame);
             this.gameInstance.goToScene('gameover');
+            this.gameInstance.stopGame(); // Call the stopGame method on the gameInstance
         } else {
             this.healthrectangle.width -= 20;
         }
